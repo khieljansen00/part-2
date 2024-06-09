@@ -1,0 +1,97 @@
+<!--
+File: index.html
+GUI Assignment: jQuery Validation Plugin
+Khiel Jansen Mantilla, UMass Lowell Computer Science
+finished by Khiel Jansen on June 8, 2024 at 9:00 PM
+
+username for uml cs server: kmantill
+username for github: khieljansen00
+
+For the validation plugin part, I remove the <script> and move the javascript to a its own file named hw3.js. Then I include jquery and jquery validate. jquery validate I download as a file so it is there in the same repository to this file. I add a validate function to validate the input by jquery validation.
+
+This file is part 2. I add two divs that provide the sliders. These sliders can make selection of the values for multiplier and multiplicand much quicker because the slider does select the values based on where the slider points are located. The slider input does rearrange itself and there is two way binding for the slider and the input values.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW4</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery.validate.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <link href="jquery-ui.min.css" rel="stylesheet">
+    <script src="hw3.js"></script>
+    <style>
+        th, td {
+            border: 0.2pc solid black;
+            padding: 3px;
+            padding-left: 1.4pc;
+            text-align: right;
+        }
+        #table-container {
+            overflow: auto;
+            height: 30.0pc;
+        }
+        table tr:nth-child(1) {
+            background-color: #000;
+            color: #fff;
+        }
+        table tr th:nth-child(1) {
+            background-color: #000;
+            color: #fff;
+        }
+        table tr:nth-child(1) th:nth-child(1) {
+            background-color: #fff;
+            border: none;
+        }
+        .entry {
+            display: block;
+        }
+        label {
+            margin-top: 1.0rem;
+        }
+        .formsubmit {
+            margin-top: 1.0rem;
+            display: block;
+        }
+        body {
+            font-size: 1.0rem;
+            
+        }
+        #tablecontainer {
+            margin-top: 2.0rem;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <p>Interactive Table</p>
+    <form id="multiplication-form">
+    <p>Enter starting value and end value for multiplier</p>
+    <div id="multiplier-slider"></div>
+    <input type="text" id="multiplier0" name="multiplier0">
+    <br>
+    <input type="text" id="multiplier1" name="multiplier1">
+
+
+    <p>Enter starting value and end value for multiplicand</p>
+    <div id="multiplicand-slider"></div>
+    <input type="text" id="multiplicand0" name="multiplicand0">
+    <br>
+    <input type="text" id="multiplicand1" name="multiplicand1">
+    <input type="submit" value="Submit" class="formsubmit">
+    </form>
+
+
+    <div id="tablecontainer">
+    <ul>
+
+    </ul>
+
+    </div>
+
+
+
+</body>
+</html>
